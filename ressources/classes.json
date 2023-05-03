@@ -1,0 +1,19 @@
+{
+    "A-111": {
+        "_type": "Normal",
+        "_numero": "A-111",
+        "_lieu": "C",
+        "_dimension": 44,
+        "_places": 44
+    },
+    "A-112": {
+        "_type": "Technique",
+        "_numero": "A-112",
+        "_lieu": "C",
+        "_dimension": 44,
+        "_places": 44,
+        "_marque_ordinateurs": "Dell",
+        "_nb_ordinateur": 10,
+        "Projecteur": false
+    }
+}
