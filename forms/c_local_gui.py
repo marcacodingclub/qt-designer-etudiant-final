@@ -54,20 +54,12 @@ class LocalDialog(QtWidgets.QDialog, Ui_Dialog):
             else:
                 c_classe = Local_Technique()
                 c_classe.deserialiser(dict_class)
-            
-            print(c_classe)
 
             lst_locals.append(c_classe)
 
-            self.model.appendRow(QtGui.QStandardItem(f"Type: {c_classe.type}"))
-            self.model.appendRow(QtGui.QStandardItem(f"Numero: {c_classe.numero}"))
-            self.model.appendRow(QtGui.QStandardItem(f"Lieu: {c_classe.lieu}"))
-            self.model.appendRow(QtGui.QStandardItem(f"Dimension: {str(c_classe.dimension)}"))
-            self.model.appendRow(QtGui.QStandardItem(f"Places: {str(c_classe.places)}"))
-
-            if c_classe.type == "Technique":
-                self.model.appendRow(QtGui.QStandardItem(f"Marque ordinateur: {str(c_classe.marque_ordinateur)}"))
-                self.model.appendRow(QtGui.QStandardItem(f"Nombre ordinateurs: {str(c_classe.nb_ordinateur)}"))
+            str_classestr = str(c_classe).split("\n")
+            for x in str_classestr:
+                self.model.appendRow(QtGui.QStandardItem(x))
 
             self.model.appendRow(QtGui.QStandardItem("************************************************"))
 
@@ -120,18 +112,23 @@ class LocalDialog(QtWidgets.QDialog, Ui_Dialog):
             self.label_8.setText(f"Erreur de type de local")
             return
 
-        # ajouter la liste
-        self.model.appendRow(QtGui.QStandardItem(f"Type: {et.type}"))
-        self.model.appendRow(QtGui.QStandardItem(f"Numero: {et.numero}"))
-        self.model.appendRow(QtGui.QStandardItem(f"Lieu: {et.lieu}"))
-        self.model.appendRow(QtGui.QStandardItem(f"Dimension: {str(et.dimension)}"))
-        self.model.appendRow(QtGui.QStandardItem(f"Places: {str(et.places)}"))
+        str_classestr = str(et).split("\n")
+        for x in str_classestr:
+            self.model.appendRow(QtGui.QStandardItem(x))
 
-        if et.type == "Technique":
-            self.model.appendRow(QtGui.QStandardItem(f"Marque ordinateur: {str(et.marque_ordinateur)}"))
-            self.model.appendRow(QtGui.QStandardItem(f"Nombre ordinateurs: {str(et.nb_ordinateur)}"))
-
-        self.model.appendRow(QtGui.QStandardItem("************************************************"))
+        #self.model.appendRow(QtGui.QStandardItem("************************************************"))
+        ## ajouter la liste
+        #self.model.appendRow(QtGui.QStandardItem(f"Type: {et.type}"))
+        #self.model.appendRow(QtGui.QStandardItem(f"Numero: {et.numero}"))
+        #self.model.appendRow(QtGui.QStandardItem(f"Lieu: {et.lieu}"))
+        #self.model.appendRow(QtGui.QStandardItem(f"Dimension: {str(et.dimension)}"))
+        #self.model.appendRow(QtGui.QStandardItem(f"Places: {str(et.places)}"))
+#
+        #if et.type == "Technique":
+        #    self.model.appendRow(QtGui.QStandardItem(f"Marque ordinateur: {str(et.marque_ordinateur)}"))
+        #    self.model.appendRow(QtGui.QStandardItem(f"Nombre ordinateurs: {str(et.nb_ordinateur)}"))
+#
+        #self.model.appendRow(QtGui.QStandardItem("************************************************"))
 
         #save to lst
         lst_locals.append(et)

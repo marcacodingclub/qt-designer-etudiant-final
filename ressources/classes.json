@@ -15,5 +15,39 @@
         "_marque_ordinateurs": "Dell",
         "_nb_ordinateur": 10,
         "Projecteur": false
+    },
+    "A-113": {
+        "_type": "Technique",
+        "_numero": "A-113",
+        "_lieu": "C",
+        "_dimension": 44,
+        "_places": 44,
+        "_marque_ordinateurs": "Omni",
+        "_nb_ordinateur": 11,
+        "Projecteur": false
+    },
+    "A-124": {
+        "_type": "Normal",
+        "_numero": "A-124",
+        "_lieu": "B",
+        "_dimension": 44,
+        "_places": 26
+    },
+    "A-666": {
+        "_type": "Technique",
+        "_numero": "A-666",
+        "_lieu": "A",
+        "_dimension": 678,
+        "_places": 27,
+        "_marque_ordinateurs": "Super Computer 30000000",
+        "_nb_ordinateur": 24,
+        "Projecteur": false
+    },
+    "A-254": {
+        "_type": "Normal",
+        "_numero": "A-254",
+        "_lieu": "B",
+        "_dimension": 44,
+        "_places": 44
     }
 }

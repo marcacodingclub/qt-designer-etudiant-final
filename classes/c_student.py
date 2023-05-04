@@ -2,6 +2,8 @@ import datetime
 
 from PyQt5.QtCore import QDate
 
+from classes.c_locaux import *
+
 class Etudiant:
 
     lst_Etudiant = []
@@ -14,6 +16,7 @@ class Etudiant:
         self._p_date_naissance = p_date_naissance
         self._age = None
         self.programme = p_programme
+        self.classse = Local_Normal()
 
     def __str__(self):
         return f"""

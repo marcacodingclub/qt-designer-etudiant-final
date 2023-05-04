@@ -8,13 +8,11 @@ class Local_Normal(Local):
         super().__init__(p_type, p_numero, p_lieu, p_dimension, p_places)
 
     def __str__(self):
-        return f"""
-Type: {self._type}
+        return f"""Type: {self._type}
 Numero: {self._numero}
 Lieu: {self._lieu}
 Dimension: {self._dimension}
-Places: {self._places}
-        """
+Places: {self._places}"""
     
     def serialiser(self):
         with open("ressources/classes.json", "r") as f_read:
@@ -38,16 +36,14 @@ class Local_Technique(Local):
         self.Projecteur = False
 
     def __str__(self):
-        return f"""
-Type: {self.type}
+        return f"""Type: {self.type}
 Numero: {self.numero}
 Lieu: {self.lieu}
 Dimension: {self.dimension}
 Places: {self.places}
 Marque Ordinateur: {self.marque_ordinateur}
 Nombre Ordinateur: {self.nb_ordinateur}
-Projecteur: {self.Projecteur}
-        """
+Projecteur: {self.Projecteur}"""
 
     def serialiser(self):
         with open("ressources/classes.json", "r") as f_read:
@@ -70,6 +66,7 @@ Projecteur: {self.Projecteur}
     @marque_ordinateur.setter
     def marque_ordinateur(self, v:str):
         if len(v) > 100: raise ValueError("Trop grand")
+        self._marque_ordinateurs = v
 
     ###########################################################################################################################
 
@@ -80,4 +77,5 @@ Projecteur: {self.Projecteur}
     @nb_ordinateur.setter
     def nb_ordinateur(self, v:int):
         if v > 25: raise ValueError("Erreur de valeur.")
+        self._nb_ordinateur = v
 
